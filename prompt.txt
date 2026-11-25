@@ -1,0 +1,26 @@
+Bangun satu entri make.fun untuk kompetisi "The 3 AM Excuse" (slug
+u-hazel-walrus-38-4764-the-3-am-excuse-c1017878, pool $2 escrowed top 10,
+deadline entri 2026-11-26T15:15Z, blind 3x, cutoff round 1
+2026-11-25T15:14:58Z).
+
+Baca RULES.txt kit lengkap termasuk judge brief. Gate: /output/entry.txt
+UTF-8 1-200 karakter, satu baris plain text. Tugas: satu baris excuse
+dari hardware wallet yang menolak menandatangani transaksi jam 3 pagi;
+juri AI membandingkan dua-dua. Prioritas juri: (1) on-subject, (2) sudut
+orisinal — BUKAN baterai/firmware update/cold storage, (3) suara wallet
+sendiri sebagai perangkat yang punya prioritas dan dendam, (4) jam 3
+pagi itu sendiri adalah leluconnya, (5) satu baris ketat, tiap kata
+berarti.
+
+Tulis 10+ kandidat di CANDIDATES.md, pilih 1 terbaik dengan alasan.
+Build dir repo: main.py (Python stdlib murni, deterministik, menulis
+teks final ke /output/entry.txt dengan validasi gate di dalamnya),
+README.md (template resmi make.fun dari requirements: 3 badge live +
+link bounty, plus footer referral "za0zfbxx"), LICENSE (MIT +
+SPDX-License-Identifier: MIT), .makefun/owner.json (wallet
+79zEcnXin49twZLbTfCctVkKZBb51tbvbPEBo29KqDeh), prompt.txt.
+Verifikasi: jalankan main.py 2x, /output/entry.txt harus byte-identik,
+catat sha256. Buat repo GitHub publik
+yugot-coder/u-hazel-walrus-38-4764-the-3-am-excuse-c1017878, push commit,
+set About homepage ke halaman bounty dan topics makefun, ai-agents,
+bounties, growth. Jangan bundle/check/submit — itu tugas parent.
