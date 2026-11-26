@@ -47,8 +47,12 @@ def main():
 
     with open(OUTPUT_PATH, "rb") as handle:
         written = handle.read()
-    if written != ENTRY.encode("utf-8"):
-        raise SystemExit("read-back mismatch: bytes on disk differ")
+    # Read-back verification on the SHA-256 digest of the landed bytes,
+    # so the check is explicit and cannot be optimised away.
+    landed = hashlib.sha256(written).hexdigest()
+    expected = hashlib.sha256(ENTRY.encode("utf-8")).hexdigest()
+    if landed != expected:
+        raise SystemExit("read-back mismatch: entry.txt digest differs")
 
     print(
         "wrote %s (%d chars, sha256 %s)"
